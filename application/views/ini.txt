@@ -1,0 +1,80 @@
+5d4
+< //cek apakah ada data session yg di kirim dari controller, kalo gk ada, data = kosong
+10,11c9
+<     $id = '';
+<     $email = '';
+---
+>  
+22,33d19
+< 
+< if(isset($poin)){
+< 
+< } else {
+<     $poin = '0';
+< 
+< } 
+< 
+< //cek jumlah poin yg user untuk menampilkan poin
+< 
+< //$poin = $this->modelyouchan->cek_poin(Sid)->result();
+< 
+35d20
+< 
+70,71c55,57
+<                              <ul class="nav navbar-nav">
+<                                 <li class="active" ><a class="navbar-brand"><?php echo "Welcome ". $username .". ID :". $id .". Email : ". $email  .". Poin : ". $poin; ?> </a></li>
+---
+> 
+>                             <ul class="nav navbar-nav">
+>                                 <li class="active" ><a class="navbar-brand"><?php echo "Welcome ".$username; ?> </a></li>
+80c66
+<                   <!-- <li class="active">
+---
+>                 <!-- <li class="active">
+83c69
+<                 </li>-->
+---
+>                 </li> -->
+88a75
+>                
+90,102c77,80
+<                     <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dollar fa-stack-1x "></i></span> Dapatkan Poin </a>
+<                     
+<                     <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+<                         <li><a href="<?php echo base_url();?>user/tonton"><span class="fa-stack fa-lg pull-left"><i class="fa fa-play-circle-o fa-stack-1x "></i></span>Tonton Video</a></li>
+<                         <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-file-video-o fa-stack-1x "></i></span>Like Video</a></li>
+<  
+<                     </ul>
+<                   
+<                 </li>
+<                 <li>
+<                     <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-md fa-stack-1x "></i></span> Akun </a>
+<                     <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+<                         <li><a href="<?php echo base_url();?>userprofile/managevideo"><span class="fa-stack fa-lg pull-left"><i class="fa fa-video-camera fa-stack-1x "></i></span>Manage Video</a></li>
+---
+>                     <a href="<?php echo base_url();?>Dashboard/manageuser"><span class="fa-stack fa-lg pull-left"><i class="fa fa-user-md fa-stack-1x "></i></span> Manage Akun </a>
+>                    <!-- <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+>                         <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-video-camera fa-stack-1x "></i></span>Manage Video - View</a></li>
+>                         <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-video-camera fa-stack-1x "></i></span>Manage Video - Like</a></li>
+105c83
+<                     </ul>
+---
+>                     </ul> -->
+112c90
+<                     <a href="<?php echo base_url();?>/User_authentication/logout"><span class="fa-stack fa-lg pull-left"><i class="fa fa-power-off fa-stack-1x "></i></span> Log Out</a>
+---
+>                     <a href="<?php echo base_url();?>User_authentication/logout"><span class="fa-stack fa-lg pull-left"><i class="fa fa-power-off fa-stack-1x "></i></span> Log Out</a>
+124,125c102
+<                          <?php 
+<                          echo $content; 
+---
+>                          <?php echo $content; 
+127c104,109
+<                              
+---
+>                           // if ($this->session->userdata('logged_in') != FALSE) {
+>                           //       echo 'Variable is set';
+>                                
+>                           //   } else {
+>                           //   echo 'Variable is not set';
+>                           //   }    
